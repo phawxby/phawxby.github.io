@@ -1,3 +1,8 @@
+general:
+  branches:
+    ignore:
+      - master # This is where pages are published so we don't need to build twice
+
 machine:
   environment:
     YARN_VERSION: 0.20.3
