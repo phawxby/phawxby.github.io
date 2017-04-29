@@ -1,0 +1,32 @@
+machine:
+  environment:
+    YARN_VERSION: 0.20.3
+  node:
+    version: 6
+
+dependencies:
+  pre:
+    - git config --global user.email "phawxby@gmail.com"
+    - git config --global user.name "CircleCI"
+
+  cache_directories:
+    - ~/.yarn
+    - ~/.cache/yarn
+
+  override:
+    - yarn global add hexo-cli
+    - yarn install --no-progress
+
+database:
+  override:
+    - echo "No database required"
+
+test:
+  override:
+    - echo "No testing yet"
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - hexo deploy
