@@ -19,7 +19,7 @@ dependencies:
     - ~/.cache/yarn
 
   override:
-    - yarn global add hexo-cli
+    - yarn global add hexo-cli gulp
     - yarn install --no-progress
 
 database:

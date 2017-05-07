@@ -71,3 +71,4 @@ deploy:
   type: git
   repo: https://github.com/phawxby/phawxby.github.io
   message: "[skip ci] Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+  beanch: master
