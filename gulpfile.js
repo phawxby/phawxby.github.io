@@ -60,14 +60,14 @@ gulp.task('deploy', function(cb) {
 });
 
 gulp.task('minify-css', function() {
-  return gulp.src('./public/**/*.css')
+  return gulp.src(['./public/**/*.css', './deploy_git/**/*.css'])
     .pipe(debug({title: 'minify-css:', showFiles: false}))
     .pipe(cssnano())
     .pipe(gulp.dest('./public'));
 });
 
 gulp.task('minify-html', function() {
-  return gulp.src('./public/**/*.html')
+  return gulp.src(['./public/**/*.html', './deploy_git/**/*.html'])
     .pipe(debug({title: 'minify-html:', showFiles: false}))
     .pipe(htmlclean())
     .pipe(htmlmin({
@@ -80,14 +80,14 @@ gulp.task('minify-html', function() {
 });
 
 gulp.task('minify-js', function() {
-  return gulp.src('./public/**/*.js')
+  return gulp.src(['./public/**/*.js', './deploy_git/**/*.js'])
     .pipe(debug({title: 'minify-js:', showFiles: false}))
     .pipe(uglify())
     .pipe(gulp.dest('./public'));
 });
 
 gulp.task('minify-img', function() {
-  return gulp.src('./public/images/*')
+  return gulp.src(['./public/images/*', './deploy_git/images/*'])
     .pipe(debug({title: 'minify-img:', showFiles: false}))
     .pipe(imagemin())
     .pipe(gulp.dest('./public/images'))
