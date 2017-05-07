@@ -63,7 +63,13 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hawxby
+
+node_sass:
+  debug: false
+  outputStyle: nested
+  precision: 5
+  sourceComments: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
