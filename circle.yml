@@ -34,4 +34,4 @@ deployment:
   source:
     branch: source
     commands:
-      - hexo deploy
+      - gulp deploy
