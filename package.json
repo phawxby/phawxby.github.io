@@ -28,6 +28,7 @@
     "hexo-renderer-scss": "^1.0.2",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
+    "normalize-scss": "^6.0.0",
     "run-sequence": "^1.2.2"
   },
   "devDependencies": {}

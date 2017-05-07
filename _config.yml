@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: Hawxby.com
+subtitle: Web Development, by trial and error
 description:
 author: Paul Hawxby
-language:
-timezone:
+language: en
+timezone: Europe/London
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -70,6 +70,8 @@ node_sass:
   outputStyle: nested
   precision: 5
   sourceComments: true
+  includePaths:
+    - node_modules/normalize-scss/sass
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
