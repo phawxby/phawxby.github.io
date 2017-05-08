@@ -17,9 +17,11 @@
   }
 }
 
-@include themer(#f9fbfc, #333, #247BA0);
+// http://paletton.com/palette.php?uid=4000u0kllll04ZUaIvPvYaR%2BO0n
+
+@include themer(#FEFEFE, #020300, #004500);
 
 .theme--dark {
-  @include themer(#312F2F, #ADBABD, #A6D9F7);
+  @include themer(#3D1D1D, #804343, #5E2F2F);
 }
 
