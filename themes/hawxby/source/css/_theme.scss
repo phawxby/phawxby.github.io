@@ -1,0 +1,25 @@
+@mixin themer($back, $text, $primary)
+{
+  body {
+    background-color: $back;
+    color: $text;
+  }
+
+  a {
+    color: $primary;
+  }
+
+  #header-title {
+    &:before {
+      background-color: $primary;
+      color: $back;
+    }
+  }
+}
+
+@include themer(#f9fbfc, #333, #247BA0);
+
+.theme--dark {
+  @include themer(#312F2F, #ADBABD, #A6D9F7);
+}
+

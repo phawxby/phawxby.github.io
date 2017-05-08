@@ -1,0 +1,29 @@
+@mixin breakpoint-between($start: null, $end: null)
+{
+  @if ($start and $end)
+  {
+    @media screen and (min-width: $start) and (max-width: $end - 1px) { @content; }
+  }
+  @else if ($start)
+  {
+    @media screen and (min-width: $start) { @content; }
+  }
+  @else if ($end)
+  {
+    @media screen and (max-width: $end - 1px) { @content; }
+  }
+}
+
+@mixin breakpoint($start)
+{
+  @include breakpoint-between($start) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max($end)
+{
+  @include breakpoint-between($end) {
+    @content;
+  }
+}

@@ -7,3 +7,20 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.outer {
+  @include breakpoint($break-sm) 
+  {
+    display: grid;
+    grid-template-columns: auto 350px;
+
+    > section,
+    > aside {
+
+    }
+  }
+}
+
+#header-outer {
+  margin-bottom: 2rem;
+}

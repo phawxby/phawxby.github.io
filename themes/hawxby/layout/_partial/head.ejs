@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Meta tags first, especially the IE edge directive -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Then blocking assets, we need to get them down as quickly as possible -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Yrsa" rel="stylesheet">
+  <%- css('css/style') %>
+
+  <!-- Then other non-render critical stuff  -->
   <%
   var title = page.title;
 
@@ -30,9 +37,6 @@
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
-  <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <% } %>
-  <%- css('css/style') %>
+  
   <%- partial('google-analytics') %>
 </head>

@@ -1,0 +1,36 @@
+#header-title {
+  $size: 4rem;
+
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  padding-left: $size + 1rem;
+  min-height: $size;
+
+  &:before {
+    content: "} {";
+    cursor: pointer;
+    margin-right: 10px;
+    width: $size;
+    height: $size;
+    border-radius: $size / 2;
+    line-height: $size;
+    text-align: center;
+    font-size: $size;
+    position: absolute;
+    left: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  > h1, 
+  > h2 {
+    margin: 0;
+  }
+
+  > h2 {
+    font-size: 1rem;
+  }
+}
