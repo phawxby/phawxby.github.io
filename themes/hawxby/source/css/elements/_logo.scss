@@ -7,8 +7,12 @@
   padding-left: $size + 1rem;
   min-height: $size;
 
-  &:before {
-    content: "} {";
+  a {
+    text-decoration: none;
+  }
+
+  > #logo {
+    
     cursor: pointer;
     margin-right: 10px;
     width: $size;
@@ -19,10 +23,10 @@
     font-size: $size;
     position: absolute;
     left: 0;
-  }
 
-  a {
-    text-decoration: none;
+    &:before {
+      content: "}{";
+    }
   }
 
   > h1, 
