@@ -1,5 +1,7 @@
+@import "normalize";
 @import "vars";
-@import "normalize/import-now";
+@include normalize();
+
 @import "mixins";
 
 @import "base";
