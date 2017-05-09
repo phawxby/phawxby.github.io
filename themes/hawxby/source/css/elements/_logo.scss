@@ -32,9 +32,21 @@
   > h1, 
   > h2 {
     margin: 0;
+
+    > a {
+      display: block;
+    }
+  }
+
+  > h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 200;
   }
 
   > h2 {
     font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 400;
   }
 }
