@@ -9,6 +9,7 @@
 
   a {
     text-decoration: none;
+    box-shadow: none;
   }
 
   > #logo {
@@ -40,13 +41,14 @@
 
   > h1 {
     font-size: 3rem;
-    line-height: 3rem;
+    line-height: 0.75em;
     font-weight: 200;
+    margin-bottom: .3em;
   }
 
   > h2 {
     font-size: 1rem;
-    line-height: 1rem;
+    line-height: 0.75em;
     font-weight: 400;
   }
 }

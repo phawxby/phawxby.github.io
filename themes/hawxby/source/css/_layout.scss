@@ -13,6 +13,7 @@ body {
   {
     display: grid;
     grid-template-columns: auto 350px;
+    grid-column-gap: 2rem;
 
     > section,
     > aside {

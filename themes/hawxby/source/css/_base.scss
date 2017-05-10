@@ -4,12 +4,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-pre,
-.highlight {
-  font-family: 'Source Code Pro', monospace;
-  font-size: 16px;
-}
-
 h1 {
   font-weight: 300;
 }
@@ -24,4 +18,18 @@ h3 {
 
 h4 {
 
+}
+
+a[href] {
+  text-decoration: none;
+  background-size: 1px 1em;
+  display: inline;
+}
+
+pre,
+figure.highlight {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 12px;
+  max-width: 100%;
+  overflow: auto;
 }

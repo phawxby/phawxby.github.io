@@ -5,8 +5,26 @@
     color: $text;
   }
 
-  a {
+  a[href] {
     color: $primary;
+  }
+
+  #main,
+  #sidebar,
+  #header-inner {
+    a[href] {
+      color: $primary;
+      box-shadow:
+        inset 0 -0.175em white,
+        inset 0 -0.2em $primary;
+
+      &:hover {
+        color: $secondary;
+        box-shadow:
+          inset 0 -0.175em white,
+          inset 0 -0.2em $secondary;
+      }
+    }
   }
 
   #header-title {
