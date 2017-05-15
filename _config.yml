@@ -38,10 +38,14 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
   tab_replace:
+prism_plugin:
+  mode: 'preprocess'
+  theme: 'default'
+  line_number: true
 
 # Category & Tag
 default_category: uncategorized

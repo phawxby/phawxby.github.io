@@ -27,9 +27,20 @@ a[href] {
 }
 
 pre,
-figure.highlight {
+figure.highlight,
+code {
   font-family: 'Source Code Pro', monospace;
+}
+
+pre,
+figure.highlight {
   font-size: 12px;
   max-width: 100%;
   overflow: auto;
+}
+
+p code {
+  background-color: $code-background;
+  padding-left: 5px;
+  padding-right: 5px;
 }

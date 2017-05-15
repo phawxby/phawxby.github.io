@@ -131,7 +131,7 @@ gulp.task('generate', function(cb) {
     console.log(err);
     hexo.exit(err);
     return cb(err);
-  })
+  });
 });
 
 gulp.task('deploy', function(cb) {
@@ -148,7 +148,7 @@ gulp.task('deploy', function(cb) {
     console.log(err);
     hexo.exit(err);
     return cb(err);
-  })
+  });
 });
 
 gulp.task('minify-css', function() {
@@ -183,7 +183,7 @@ gulp.task('minify-img', function() {
     .pipe(debug({title: 'minify-img:', showFiles: false}))
     .pipe(imagemin())
     .pipe(gulp.dest('./public/images'))
-})
+});
 
 gulp.task('compress', function(cb) {
     runSequence(['minify-html', 'minify-css', 'minify-js', 'minify-img'], cb);
@@ -192,6 +192,4 @@ gulp.task('compress', function(cb) {
 gulp.task('build', function(cb) {
     runSequence('clean', 'generate', 'compress', cb)
 });
-
-gulp.task('default', [])
 ```
