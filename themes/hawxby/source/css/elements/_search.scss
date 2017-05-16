@@ -1,0 +1,9 @@
+#search-form-wrap {
+  input[type='search'] {
+    padding: $gutter / 8;
+    margin-right: $gutter / 12;
+  }
+  button {
+    padding: $gutter / 8 $gutter / 4;
+  }
+}

@@ -33,6 +33,28 @@
       color: $back;
     }
   }
+
+  input {
+    outline: none;
+    border: 1px solid $primary;
+
+    &:focus,
+    &:hover {
+      border-color: $secondary;
+    }
+  }
+
+  button {
+    outline: none;
+    background-color: $primary;
+    border: 1px solid $primary;
+
+    &:focus,
+    &:hover {
+      background-color: $secondary;
+      border-color: $secondary;
+    }
+  }
 }
 
 // http://paletton.com/palette.php?uid=4000u0kllll04ZUaIvPvYaR%2BO0n

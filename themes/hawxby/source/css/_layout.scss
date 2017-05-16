@@ -11,9 +11,48 @@ body {
 .outer {
   @include breakpoint($break-sm) 
   {
-    display: grid;
-    grid-template-columns: auto 350px;
-    grid-column-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    > * {
+      padding-left: $gutter / 2;
+      padding-right: $gutter / 2;
+
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:nth-child(1) {
+        flex: 1;
+      }
+      &:nth-child(2) {
+        width: 350px;
+      }
+    }
+
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: auto 350px;
+      grid-column-gap: $gutter;
+
+      > * {
+        width: auto;
+        padding: 0;
+        
+        &:nth-child(1) {
+          flex: initial;
+        }
+        &:nth-child(2) {
+          width: auto;
+        }
+      }
+    }
 
     > section,
     > aside {
