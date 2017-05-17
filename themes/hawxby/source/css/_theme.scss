@@ -1,67 +1,78 @@
-@mixin themer($back, $text, $primary, $secondary)
-{
-  body {
-    background-color: $back;
-    color: $text;
-  }
-
-  a[href] {
-    color: $primary;
-  }
-
-  #main,
-  #sidebar,
-  #header-inner {
-    a[href] {
-      color: $primary;
-      box-shadow:
-        inset 0 -0.175em white,
-        inset 0 -0.2em $primary;
-
-      &:hover {
-        color: $secondary;
-        box-shadow:
-          inset 0 -0.175em white,
-          inset 0 -0.2em $secondary;
-      }
-    }
-  }
-
-  #header-title {
-    #logo {
-      background-color: $primary;
-      color: $back;
-    }
-  }
-
-  input {
-    outline: none;
-    border: 1px solid $primary;
-
-    &:focus,
-    &:hover {
-      border-color: $secondary;
-    }
-  }
-
-  button {
-    outline: none;
-    background-color: $primary;
-    border: 1px solid $primary;
-
-    &:focus,
-    &:hover {
-      background-color: $secondary;
-      border-color: $secondary;
-    }
-  }
-}
-
 // http://paletton.com/palette.php?uid=4000u0kllll04ZUaIvPvYaR%2BO0n
 
-@include themer(#FEFEFE, #212121, #2caadc, #FFC22A);
+$back: #FEFEFE;
+$text: #212121;
+$primary: #2caadc;
+$primaryAlt: #12475C;
+$secondary: #86144E;
+$tertiary: #F29405;
+// 97AF16
+// 12475C
 
-.theme--dark {
-  @include themer(#010E13, #48666A, #2caadc, #FFC22A);
+body {
+  background-color: $back;
+  color: $text;
 }
 
+a[href] {
+  color: $primary;
+}
+
+#main,
+#sidebar,
+#header-inner {
+  a[href] {
+    color: $primary;
+    box-shadow:
+      inset 0 -0.175em white,
+      inset 0 -0.2em $primary;
+
+      transition: color ease-in-out 150ms, box-shadow ease-in-out 150ms;
+
+    &:hover {
+      color: $primaryAlt;
+      box-shadow:
+        inset 0 -0.175em white,
+        inset 0 -0.2em $primaryAlt;
+    }
+  }
+}
+
+#header-title {
+  #logo {
+    background-color: $secondary;
+    color: $back;
+  }
+
+  h1 > a, 
+  h2 > a {
+    color: $secondary;
+  }
+}
+
+input {
+  outline: none;
+  border: 1px solid $primary;
+
+  transition: border-color ease-in-out 150ms;
+
+  &:focus,
+  &:hover {
+    border-color: $primaryAlt;
+  }
+}
+
+button {
+  outline: none;
+  background-color: $primary;
+  border: 1px solid $primary;
+  color: $back;
+
+  transition: background-color ease-in-out 150ms, border-color ease-in-out 150ms;
+
+  &:focus,
+  &:hover {
+    background-color: $primaryAlt;
+    border-color: $primaryAlt;
+  }
+}
